@@ -1,0 +1,73 @@
+<div class="container">
+  <form class="form" [formGroup]="form" (ngSubmit)="handleSubmit()">
+    <div class="Group">
+      <label for="Email">Correo electrónico</label>
+      <input id="email" type="email" formControlName="email" />
+    </div>
+    <div class="Group">
+      <label for="Password">Contraseña</label>
+      <input
+        id="password"
+        formControlName="password"
+        type="password"
+        (input)="onInputChange()"
+      />
+    </div>
+    <div class="Group">
+      <button class="btn" type="submit">Iniciar sesión</button>
+    </div>
+  </form>
+  <div class="buttons-container">
+    <button
+      class="button"
+      (click)="handleQuickAccess('admin@admin.com', '111111')"
+    >
+      Admin
+    </button>
+    <button
+      class="button"
+      (click)="handleQuickAccess('usuario@usuario.com', '333333')"
+    >
+      Usuario
+    </button>
+    <button
+      class="button"
+      (click)="handleQuickAccess('anonimo@anonimo.com', '444444')"
+    >
+      Anónimo
+    </button>
+    <button
+      class="button"
+      (click)="handleQuickAccess('invitado@invitado.com', '222222')"
+    >
+      Invitado
+    </button>
+    <button
+      class="button"
+      (click)="handleQuickAccess('tester@tester.com', '555555')"
+    >
+      Tester
+    </button>
+  </div>
+
+  <div *ngIf="errorMessage.length > 0">
+    <ion-toast
+      isOpen="errorMessage.length > 0"
+      [message]="errorMessage"
+      [duration]="5000"
+      position="bottom"
+      (didDismiss)="errorMessage = ''"
+      color="danger"
+    ></ion-toast>
+  </div>
+</div>
+
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="medium"
+  color="#d9d9d9"
+  type="square-loader"
+  [fullScreen]="true"
+>
+  <p style="color: #dee2e6; font-family: Roboto">Cargando...</p>
+</ngx-spinner>

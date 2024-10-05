@@ -1,0 +1,7 @@
+{
+  "name": "juegoDeMemoria",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
