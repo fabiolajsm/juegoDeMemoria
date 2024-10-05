@@ -1,20 +1,48 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title slot="start">Juego de memoria</ion-title>
+    <ion-button class="logout" fill="clear" slot="end" (click)="handleLogout()">
+      Cerrar sesión
+      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="level-selection">
+    <h2>Selecciona un nivel de dificultad</h2>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-card class="level-card low" (click)="selectLevel('bajo')">
+      <div class="card-content">
+        <ion-card-header>
+          <ion-card-title>Bajo</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Ideal para principiantes. ¡Comienza con unas pocas cartas!
+        </ion-card-content>
+      </div>
+    </ion-card>
+
+    <ion-card class="level-card medium" (click)="selectLevel('medio')">
+      <div class="card-content">
+        <ion-card-header>
+          <ion-card-title>Medio</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Un reto moderado. Perfecto para jugadores intermedios.
+        </ion-card-content>
+      </div>
+    </ion-card>
+
+    <ion-card class="level-card high" (click)="selectLevel('alto')">
+      <div class="card-content">
+        <ion-card-header>
+          <ion-card-title>Alto</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Para los más expertos. ¡Pon a prueba tu memoria!
+        </ion-card-content>
+      </div>
+    </ion-card>
   </div>
 </ion-content>

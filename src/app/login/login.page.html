@@ -2,7 +2,12 @@
   <form class="form" [formGroup]="form" (ngSubmit)="handleSubmit()">
     <div class="Group">
       <label for="Email">Correo electrónico</label>
-      <input id="email" type="email" formControlName="email" />
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        placeholder="hola@gmail.com"
+      />
     </div>
     <div class="Group">
       <label for="Password">Contraseña</label>
@@ -11,6 +16,7 @@
         formControlName="password"
         type="password"
         (input)="onInputChange()"
+        placeholder="una contraseña"
       />
     </div>
     <div class="Group">
