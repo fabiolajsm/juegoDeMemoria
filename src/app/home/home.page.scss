@@ -21,8 +21,9 @@
   height: calc(33% - 20px); /* Ocupa un tercio de la altura disponible */
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
-  color: white; /* Texto blanco para mayor contraste */
+  color: #d9d9d9; /* Texto blanco para mayor contraste */
   display: flex; /* Flex para ocupar toda la tarjeta */
+  font-family: "Ubuntu";
   flex-direction: column; /* Coloca el contenido verticalmente */
 }
 
@@ -36,10 +37,12 @@
     font-size: 22px;
     font-weight: bold;
     color: black;
+    font-family: "Ubuntu";
   }
   ion-card-content {
     font-size: 22px;
     color: black;
+    font-family: "Ubuntu";
   }
 }
 
@@ -65,4 +68,16 @@ h2 {
   margin-bottom: 20px;
   font-size: 24px;
   color: #d9d9d9; /* Color del título */
+}
+
+.best-scores {
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  color: #d9d9d9;
+  text-decoration: underline;
+  &:hover {
+    color: black;
+  }
 }

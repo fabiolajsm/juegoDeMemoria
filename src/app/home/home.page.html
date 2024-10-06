@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-title slot="start">Juego de memoria</ion-title>
     <ion-button class="logout" fill="clear" slot="end" (click)="handleLogout()">
-      Cerrar sesión
+      Salir
       <i class="fa fa-arrow-right" aria-hidden="true"></i>
     </ion-button>
   </ion-toolbar>
@@ -12,10 +12,10 @@
   <div class="level-selection">
     <h2>Selecciona un nivel de dificultad</h2>
 
-    <ion-card class="level-card low" (click)="selectLevel('bajo')">
+    <ion-card class="level-card low" (click)="selectLevel('facil')">
       <div class="card-content">
         <ion-card-header>
-          <ion-card-title>Bajo</ion-card-title>
+          <ion-card-title>Fácil</ion-card-title>
         </ion-card-header>
         <ion-card-content>
           Ideal para principiantes. ¡Comienza con unas pocas cartas!
@@ -34,15 +34,18 @@
       </div>
     </ion-card>
 
-    <ion-card class="level-card high" (click)="selectLevel('alto')">
+    <ion-card class="level-card high" (click)="selectLevel('dificil')">
       <div class="card-content">
         <ion-card-header>
-          <ion-card-title>Alto</ion-card-title>
+          <ion-card-title>Difícil</ion-card-title>
         </ion-card-header>
         <ion-card-content>
           Para los más expertos. ¡Pon a prueba tu memoria!
         </ion-card-content>
       </div>
     </ion-card>
+    <div class="best-scores">
+      <p (click)="goToBestScores()">Ver los mejores 5 registros</p>
+    </div>
   </div>
 </ion-content>

@@ -1,0 +1,30 @@
+<ion-header class="header">
+  <ion-toolbar>
+    <ion-button slot="start" fill="clear" (click)="back()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <ion-title>Nivel {{dificultad}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="text-center">
+    <p>Termina antes de los 30 segundos</p>
+    <p>Segundos transcurridos: {{ seconds }}</p>
+    <div *ngIf="!gameStarted">
+      <button (click)="startGame()">Comenzar Juego</button>
+    </div>
+  </div>
+  <div class="container" *ngIf="gameStarted">
+    <div class="card-container">
+      <div *ngFor="let pic of arrayGame; let i = index" class="card">
+        <ion-button (click)="selectPic(i)" [disabled]="!active">
+          <img [src]="pic" [alt]="i" />
+        </ion-button>
+      </div>
+    </div>
+  </div>
+  <ion-button fill="outlined" slot="center" (click)="reset()">
+    Reiniciar
+  </ion-button>
+</ion-content>

@@ -33,13 +33,17 @@ import { Router } from '@angular/router';
 export class HomePage {
   constructor(private auth: AuthService, private router: Router) {}
 
-  selectLevel(level: string) {
-    console.log(`Nivel seleccionado: ${level}`);
-    // Aquí puedes navegar a la pantalla del juego o realizar otra acción
+  selectLevel(level: 'facil' | 'medio' | 'dificil') {
+    localStorage.setItem('dificultad', level);
+    this.router.navigate(['juego']);
   }
 
   handleLogout() {
     this.auth.logout();
     this.router.navigateByUrl('login');
+  }
+
+  goToBestScores() {
+    this.router.navigate(['mejoresRegistros']);
   }
 }
