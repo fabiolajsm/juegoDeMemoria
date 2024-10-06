@@ -13,16 +13,26 @@
 
     <ion-list *ngIf="bestScores.length > 0; else noScores">
       <ion-item *ngFor="let score of bestScores">
-        <ion-label>{{ score.name }} - {{ score.score }}</ion-label>
+        <ion-label>{{ score.name }}: Aciertos {{ score.score }}</ion-label>
       </ion-item>
     </ion-list>
 
     <ng-template #noScores>
       <ion-list>
         <ion-item>
-          <ion-label>No hay registros disponibles.</ion-label>
+          <ion-label>No hay registros de juegos ganados.</ion-label>
         </ion-item>
       </ion-list>
     </ng-template>
   </div>
 </ion-content>
+
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="medium"
+  color="#d9d9d9"
+  type="square-loader"
+  [fullScreen]="true"
+>
+  <p style="color: #dee2e6; font-family: Roboto">Cargando...</p>
+</ngx-spinner>

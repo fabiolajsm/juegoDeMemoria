@@ -3,4 +3,6 @@ export interface Game {
   tiempo: number;
   user: string;
   tipo: string;
+  ganado: boolean;
+  aciertos: number;
 }
