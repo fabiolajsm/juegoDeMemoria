@@ -1,35 +1,35 @@
-.header {
-  background-color: black;
+.ion-header {
   font-family: "Ubuntu", sans-serif;
-  padding: 20px 0; /* Añadir padding para más espacio */
+  padding: 20px 0;
+  background-color: black;
 }
 
 ion-icon {
   color: #d9d9d9;
-  font-size: 40px; /* Aumentar tamaño del ícono */
+  font-size: 40px;
 }
 
 ion-title {
-  font-size: 36px; /* Aumentar tamaño del título */
+  font-size: 30px;
 }
 
 h1 {
   text-align: center;
-  font-size: 48px; /* Aumentar tamaño del encabezado */
-  margin: 45px 0; /* Añadir margen superior e inferior */
+  font-size: 35px;
+  margin: 45px 0;
 }
 
 ion-label {
   text-align: center;
-  font-size: 24px; /* Aumentar tamaño del texto en los labels */
+  font-size: 24px;
 }
 
 ion-list {
-  margin: 0 2rem; /* Ajustar margen para el listado */
+  margin: 0 2rem;
   margin-top: 2rem;
 }
 
 ion-item {
-  font-size: 30px; /* Aumentar tamaño del texto en los items */
-  padding: 22px; /* Aumentar padding para más área clickeable */
+  font-size: 30px;
+  padding: 22px;
 }
