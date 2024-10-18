@@ -1,23 +1,35 @@
 .header {
   background-color: black;
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
+  padding: 20px 0; /* Añadir padding para más espacio */
 }
 
 ion-icon {
   color: #d9d9d9;
+  font-size: 40px; /* Aumentar tamaño del ícono */
+}
+
+ion-title {
+  font-size: 36px; /* Aumentar tamaño del título */
 }
 
 h1 {
   text-align: center;
-  font-size: 24px;
+  font-size: 48px; /* Aumentar tamaño del encabezado */
+  margin: 45px 0; /* Añadir margen superior e inferior */
 }
 
 ion-label {
   text-align: center;
+  font-size: 24px; /* Aumentar tamaño del texto en los labels */
 }
 
 ion-list {
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin: 0 2rem; /* Ajustar margen para el listado */
   margin-top: 2rem;
+}
+
+ion-item {
+  font-size: 30px; /* Aumentar tamaño del texto en los items */
+  padding: 22px; /* Aumentar padding para más área clickeable */
 }

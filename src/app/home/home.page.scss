@@ -1,7 +1,13 @@
 .logout {
+  font-size: 24px;
+  text-transform: none;
   i {
     margin-left: 1rem;
   }
+}
+
+ion-title {
+  font-size: 24px;
 }
 
 .level-selection {
@@ -28,22 +34,23 @@
 }
 
 .card-content {
-  flex: 1; /* Ocupa todo el espacio disponible en la tarjeta */
   display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centrar verticalmente el contenido */
-  padding: 20px; /* Espaciado interno */
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
   ion-card-title {
-    font-size: 20px;
+    font-size: 40px;
     font-weight: bold;
     color: black;
     font-family: "Ubuntu";
+    text-align: center;
   }
   ion-card-content {
-    font-size: 20px;
+    font-size: 30px;
     color: black;
     font-family: "Ubuntu";
     margin-bottom: 25px;
+    text-align: center;
   }
 }
 
@@ -67,13 +74,14 @@
 
 h2 {
   margin-bottom: 20px;
-  font-size: 24px;
-  color: #d9d9d9; /* Color del título */
+  font-size: 30px;
+  color: #d9d9d9;
+  font-weight: 600;
 }
 
 .best-scores {
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 24px;
   text-align: center;
   cursor: pointer;
   color: #d9d9d9;

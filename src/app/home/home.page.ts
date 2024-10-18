@@ -34,6 +34,8 @@ export class HomePage {
   constructor(private auth: AuthService, private router: Router) {}
 
   selectLevel(level: 'facil' | 'medio' | 'dificil') {
+    console.log(level, 'aca');
+
     localStorage.setItem('dificultad', level);
     this.router.navigate(['juego']);
   }

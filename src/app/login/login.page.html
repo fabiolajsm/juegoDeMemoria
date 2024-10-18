@@ -52,7 +52,7 @@
       class="button"
       (click)="handleQuickAccess('tester@tester.com', '555555')"
     >
-      Tester
+      Pruebas
     </button>
   </div>
 
@@ -61,7 +61,7 @@
       isOpen="errorMessage.length > 0"
       [message]="errorMessage"
       [duration]="5000"
-      position="bottom"
+      position="top"
       (didDismiss)="errorMessage = ''"
       color="danger"
     ></ion-toast>
@@ -75,5 +75,7 @@
   type="square-loader"
   [fullScreen]="true"
 >
-  <p style="color: #dee2e6; font-family: Roboto">Cargando...</p>
+  <p style="color: #dee2e6; font-family: Ubuntu; font-size: 40px">
+    Cargando...
+  </p>
 </ngx-spinner>

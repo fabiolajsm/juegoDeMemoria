@@ -74,6 +74,7 @@ export class GamePage implements OnInit, OnDestroy {
     private router: Router
   ) {
     addIcons({ arrowBackOutline });
+
     this.dificultad = localStorage.getItem('dificultad') ?? 'facil';
     switch (this.dificultad) {
       case 'facil':
@@ -150,23 +151,17 @@ export class GamePage implements OnInit, OnDestroy {
           this.selected = [];
           this.active = true;
 
-          // Mostrar alerta de acierto
-          const alert = await this.alertController.create({
-            message: '¡Acertaste!',
-            buttons: ['Aceptar'],
-          });
-          await alert.present();
-
           // Verificar si ganó
           if (!this.arrayGame.includes(this.pregunta)) {
             const winAlert = await this.alertController.create({
+              cssClass: 'custom-alert',
               message: '¡¡¡ GANASTE !!!',
               buttons: [
                 {
                   text: 'Aceptar',
                   handler: () => {
-                    this.saveGame(true); // Guardar el juego como ganado
-                    this.gameStarted = false; // Desactivar el juego
+                    this.saveGame(true);
+                    this.gameStarted = false;
                   },
                 },
               ],
@@ -176,11 +171,6 @@ export class GamePage implements OnInit, OnDestroy {
         } else {
           // No coinciden, ocultar imágenes y mostrar alerta de fallo
           this.active = false;
-          const alert = await this.alertController.create({
-            message: 'Fallaste, intenta de nuevo',
-            buttons: ['Aceptar'],
-          });
-          await alert.present();
 
           this.timerId = setTimeout(() => {
             this.arrayGame[this.selectedIndex[0]] = this.pregunta;
@@ -207,6 +197,7 @@ export class GamePage implements OnInit, OnDestroy {
       this.subscription.unsubscribe();
     }
     const alert = await this.alertController.create({
+      cssClass: 'custom-alert',
       message: 'Se acabó el tiempo, perdiste',
       buttons: [
         {

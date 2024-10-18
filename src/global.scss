@@ -39,3 +39,13 @@
 ion-app {
   --ion-background-color: #003566;
 }
+
+.custom-alert .alert-message {
+  font-size: 30px;
+  text-align: center;
+}
+
+.custom-alert .alert-button {
+  font-size: 30px;
+  text-transform: none;
+}
